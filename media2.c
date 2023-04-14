@@ -38,4 +38,4 @@ mostrar quantidade de numeros abaixo da media
 mostrar quantidade de numeros acima da media
 
 a += b -> a = a + b
-*/
+*/ 
