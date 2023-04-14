@@ -9,4 +9,4 @@ int main() {
     scanf("%f %f", &a, &b);
     printf("%.5f\n", media(a,b));
     return 0;
-}
+} 
