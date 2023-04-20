@@ -1,29 +1,33 @@
 #include <stdio.h>
 
 int main() {
-    int n, i, soma = 0; //n = tamanho do vetor, i = contador
-    float media;
+    int n, i;
+    long long int soma = 0; //n = tamanho do vetor, i = contador
+    double media; // double tem maior precisão que float
     scanf("%d", &n);
     int vetor[n];
-    for (i = 0; i < n ; ++i) // ++i = incrementa antes da operação
+    for (i = 0; i < n ; ++i) { // ++i = incrementa antes da operação
         scanf("%d", &vetor[i]);
         soma = soma + vetor[i];
-    media = soma/n;
+    }
+    media = (double)soma/n;
     int abaixo = 0, acima = 0;
     for (i = 0; i<n; ++i)
         if (vetor[i] < media)
             abaixo++;
         else
             acima++;
-    printf("%.1f\n", media);
-    printf("%d\n", abaixo);
+    printf("%.1f\n", media); // print media
+    printf("%d", abaixo); // saida: 2_
     for (i = 0; i < n; ++i)
         if (vetor[i] < media)
-            printf("%d", vetor[i]);
-    printf("%d\n", acima);
+            printf(" %d", vetor[i]); // print numeos abaxio da media
+    printf("\n"); // quebra de linha dos numeros abaixo da media
+    printf("%d", acima); // saida: 3_
     for(i = 0; i < n; ++i)
         if (vetor[i] >= media)
-            printf("%d", vetor[i]);
+            printf(" %d", vetor[i]); // print numeros acima da media 
+    printf("\n");
     return 0;
     //   0  1  2  3  4
     // { 1, 2, 3, 4, 5}
